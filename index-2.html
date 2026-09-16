@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vitorino Andrade — Gestão de Segurança e Treinamentos. Segurança do Trabalho, treinamentos em NRs, PGR, análise de riscos, brigada de incêndio, bombeiro civil para empresas e eventos e primeiros socorros.">
+  <title>Vitorino Andrade | Gestão de Segurança e Treinamentos</title>
+  <style>
+    :root{
+      --verde:#214b3a; --verde2:#2f6b51; --claro:#f3f6f4; --texto:#17211c;
+      --cinza:#637069; --branco:#fff; --borda:#dfe7e2; --dourado:#c9a55b;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--texto);line-height:1.6;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--borda);backdrop-filter:blur(8px)}
+    nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .logo{font-weight:900;font-size:1.2rem;color:var(--verde);letter-spacing:.5px}
+    .logo span{display:block;font-size:.67rem;color:var(--cinza);font-weight:700;letter-spacing:1.4px}
+    .links{display:flex;gap:24px;font-size:.9rem;font-weight:700}
+    .links a:hover{color:var(--verde2)}
+    .btn{display:inline-block;background:var(--verde);color:#fff;padding:13px 21px;border-radius:8px;font-weight:800;border:2px solid var(--verde);transition:.2s}
+    .btn:hover{background:#183a2c;transform:translateY(-1px)}
+    .btn.alt{background:transparent;color:var(--verde)}
+    .hero{background:linear-gradient(135deg,#eef4f0 0%,#fff 65%);padding:92px 0 78px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
+    .tag{display:inline-block;color:var(--verde);font-weight:900;font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:15px}
+    h1{font-size:clamp(2.3rem,5vw,4.4rem);line-height:1.05;margin-bottom:22px;letter-spacing:-2px}
+    h1 em{color:var(--verde2);font-style:normal}
+    .lead{font-size:1.15rem;color:var(--cinza);max-width:680px;margin-bottom:30px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-card{background:var(--verde);color:#fff;padding:34px;border-radius:18px;box-shadow:0 18px 50px rgba(33,75,58,.18)}
+    .hero-card .big{font-size:4rem;font-weight:900;line-height:1}
+    .hero-card h3{margin:12px 0 8px;font-size:1.35rem}
+    .hero-card p{opacity:.88}
+    section{padding:82px 0}
+    .section-head{max-width:720px;margin-bottom:38px}
+    .section-head h2{font-size:2.2rem;line-height:1.15;margin-bottom:12px}
+    .section-head p{color:var(--cinza)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{border:1px solid var(--borda);border-radius:14px;padding:27px;background:#fff}
+    .card:hover{box-shadow:0 12px 30px rgba(20,50,35,.08)}
+    .icon{font-size:2rem;margin-bottom:13px}
+    .card h3{font-size:1.12rem;margin-bottom:8px;color:var(--verde)}
+    .card p{font-size:.94rem;color:var(--cinza)}
+    .band{background:var(--claro)}
+    .numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .number{padding:25px;border-left:4px solid var(--verde)}
+    .number strong{font-size:1.6rem;display:block;color:var(--verde)}
+    .number span{color:var(--cinza);font-size:.9rem}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{position:relative;padding:25px;background:var(--claro);border-radius:12px}
+    .step b{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--verde);color:#fff;margin-bottom:15px}
+    .step h3{margin-bottom:7px}
+    .step p{color:var(--cinza);font-size:.92rem}
+    .cta{background:var(--verde);color:#fff;padding:58px;border-radius:20px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .cta h2{font-size:2rem;line-height:1.15;margin-bottom:8px}
+    .cta p{opacity:.86}
+    .cta .btn{background:#fff;color:var(--verde);border-color:#fff}
+    footer{background:#14251d;color:#dce6e0;padding:42px 0 22px}
+    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+    footer h3{color:#fff;margin-bottom:10px}
+    footer p,footer li{color:#aebdb5;font-size:.9rem}
+    footer ul{list-style:none}
+    footer li{margin:6px 0}
+    .copy{border-top:1px solid #315043;margin-top:30px;padding-top:18px;font-size:.78rem;color:#8fa199}
+    .mobile{display:none}
+    @media(max-width:850px){
+      .links{display:none}.mobile{display:block}
+      .hero-grid,.footer-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .numbers,.process{grid-template-columns:1fr 1fr}
+      .hero{padding-top:65px}
+    }
+    @media(max-width:560px){
+      section{padding:60px 0}.grid,.numbers,.process{grid-template-columns:1fr}
+      .cta{padding:35px 25px;display:block}.cta .btn{margin-top:22px}
+      h1{letter-spacing:-1px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#inicio" class="logo">VITORINO ANDRADE <span>GESTÃO DE SEGURANÇA E TREINAMENTOS</span></a>
+      <div class="links">
+        <a href="#servicos">Serviços</a>
+        <a href="#treinamentos">Treinamentos</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <a class="btn mobile" href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">Segurança • Prevenção • Capacitação</span>
+      <h1>Segurança que protege.<br><em>Conhecimento que prepara.</em></h1>
+      <p class="lead">Soluções em Segurança do Trabalho, prevenção de emergências, gestão de riscos e treinamentos profissionais para empresas, condomínios, eventos, equipes e instituições.</p>
+      <div class="actions">
+        <a class="btn" href="#contato">Solicitar orçamento</a>
+        <a class="btn alt" href="#servicos">Conhecer serviços</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="big">VA</div>
+      <h3>Vitorino Andrade<br>Gestão de Segurança e Treinamentos</h3>
+      <p>Atuação com foco em prevenção, preparação para emergências, capacitação e cultura de segurança.</p>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Soluções</span>
+      <h2>Serviços para diferentes necessidades de segurança</h2>
+      <p>Estruturamos treinamentos e ações preventivas de acordo com o perfil da operação e os objetivos do cliente.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><div class="icon">🦺</div><h3>Segurança do Trabalho</h3><p>Consultoria, orientação e ações de prevenção para apoiar empresas na gestão de Saúde e Segurança do Trabalho.</p></article>
+      <article class="card"><div class="icon">📋</div><h3>PGR e Gestão de Riscos</h3><p>Elaboração e apoio na gestão de PGR, inventário de riscos, planos de ação e documentação de SST.</p></article>
+      <article class="card"><div class="icon">⚠️</div><h3>Análise de Riscos</h3><p>Elaboração de análises de riscos e orientações preventivas para atividades, operações e serviços.</p></article>
+      <article class="card"><div class="icon">📚</div><h3>Treinamentos em NRs</h3><p>Treinamentos em Normas Regulamentadoras conforme a necessidade da empresa, atividade, público e requisitos aplicáveis.</p></article>
+      <article class="card"><div class="icon">🔥</div><h3>Brigada de Incêndio</h3><p>Formação, reciclagem, exercícios e preparação de equipes para prevenção e resposta inicial a emergências.</p></article>
+      <article class="card"><div class="icon">🚒</div><h3>Equipe de Bombeiros Civis</h3><p>Disponibilização de equipe de bombeiros civis para atendimento de empresas, operações e eventos, conforme o escopo contratado.</p></article>
+      <article class="card"><div class="icon">🚑</div><h3>Primeiros Socorros e SBV</h3><p>Capacitações práticas para preparação das equipes diante de situações de emergência.</p></article>
+      <article class="card"><div class="icon">🧯</div><h3>Prevenção e Combate a Incêndio</h3><p>Treinamentos sobre equipamentos, procedimentos, abandono de área e resposta inicial.</p></article>
+      <article class="card"><div class="icon">🏢</div><h3>Treinamentos In Company</h3><p>Conteúdo, carga horária e formato planejados de acordo com a realidade e necessidade do cliente.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="treinamentos">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Capacitação e documentação</span>
+      <h2>Treinamentos, NRs e documentos de Segurança do Trabalho</h2>
+      <p>Atendemos diferentes necessidades de capacitação e documentação, sempre considerando a atividade, os riscos e os requisitos aplicáveis à organização.</p>
+    </div>
+    <div class="grid">
+      <article class="card"><h3>Normas Regulamentadoras</h3><p>Treinamentos em NRs conforme demanda e aplicabilidade, incluindo capacitações relacionadas a atividades críticas e riscos ocupacionais.</p></article>
+      <article class="card"><h3>NR-33</h3><p>Segurança e preparação para trabalhos em espaços confinados, conforme aplicabilidade da atividade.</p></article>
+      <article class="card"><h3>NR-35</h3><p>Trabalho em altura, prevenção de riscos e práticas de segurança aplicáveis.</p></article>
+      <article class="card"><h3>PGR</h3><p>Elaboração e apoio documental para o Programa de Gerenciamento de Riscos e seus componentes.</p></article>
+      <article class="card"><h3>Análise de Riscos</h3><p>Elaboração de análises de riscos para apoiar o planejamento seguro das atividades.</p></article>
+      <article class="card"><h3>Lei Lucas e Primeiros Socorros</h3><p>Capacitação de equipes para resposta inicial em situações de emergência.</p></article>
+      <article class="card"><h3>SBV</h3><p>Suporte Básico de Vida com abordagem prática para resposta inicial a emergências.</p></article>
+      <article class="card"><h3>Brigada e Abandono</h3><p>Organização, prevenção, comunicação, procedimentos e preparação das equipes.</p></article>
+      <article class="card"><h3>Plano de Emergência</h3><p>Orientação e treinamento para preparação, resposta e organização durante emergências.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="empresa">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Sobre a VAS</span>
+      <h2>Experiência prática transformada em treinamento</h2>
+      <p>A Vitorino Andrade nasce com uma proposta objetiva: aproximar conhecimento técnico da realidade operacional, ajudando pessoas e organizações a prevenir riscos, capacitar equipes e responder melhor às emergências. Atuamos com Segurança do Trabalho, treinamentos, documentação, prevenção de incêndios e atendimento com equipe de Bombeiros Civis para empresas e eventos.</p>
+    </div>
+    <div class="numbers">
+      <div class="number"><strong>Prevenção</strong><span>Atuação orientada à redução de riscos.</span></div>
+      <div class="number"><strong>Prática</strong><span>Treinamentos com foco em aplicação real.</span></div>
+      <div class="number"><strong>Capacitação</strong><span>Conhecimento para equipes mais preparadas.</span></div>
+      <div class="number"><strong>Segurança</strong><span>Procedimentos e cultura de prevenção.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Como funciona</span>
+      <h2>Do diagnóstico à capacitação</h2>
+    </div>
+    <div class="process">
+      <div class="step"><b>1</b><h3>Entendemos</h3><p>Conhecemos o ambiente, equipe e necessidade apresentada.</p></div>
+      <div class="step"><b>2</b><h3>Planejamos</h3><p>Definimos conteúdo, carga horária e formato adequado.</p></div>
+      <div class="step"><b>3</b><h3>Treinamos</h3><p>Realizamos a capacitação com abordagem objetiva e prática.</p></div>
+      <div class="step"><b>4</b><h3>Acompanhamos</h3><p>Orientamos sobre continuidade e boas práticas de prevenção.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <div class="cta">
+      <div>
+        <h2>Vamos conversar sobre a segurança da sua equipe?</h2>
+        <p>Solicite uma proposta e conte o que sua empresa precisa.</p>
+      </div>
+      <a class="btn" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Vitorino Andrade Gestão de Segurança e Treinamentos</h3>
+        <p>Segurança do Trabalho • Emergências • Brigada • Bombeiro Civil • Treinamentos</p>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <p>Baixada Santista e demais localidades, conforme projeto.</p>
+      </div>
+      <div>
+        <h3>Contato</h3>
+        <ul>
+          <li>WhatsApp: inserir número</li>
+          <li>E-mail: inserir e-mail</li>
+          <li>CNPJ: inserir após abertura</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">© 2026 Vitorino Andrade Gestão de Segurança e Treinamentos. Todos os direitos reservados.</div>
+  </div>
+</footer>
+</body>
+</html>
